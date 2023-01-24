@@ -10,6 +10,7 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+
   }
 
   .hidden{
@@ -23,18 +24,20 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-    transition: all 1s;
+    transition: 1s;
   }
 
   .text{
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    line-height: 1.5;
-    text-align: justify;
-    margin: 10px 0;
-    padding: 0 20px;
   }
 
+  .text-layout{
+    margin: 4rem;
+    align-items: left;
+    box-sizing: border-box;
+    transition-delay: 800ms;
+  }
   .standard-image{
     max-width: 25%;
     height: auto;
@@ -48,4 +51,35 @@ section {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px #aaa;
   }
+
+  h1{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .logos{
+    display: flex;
+    margin: 4rem;
+  }
+  .delay:nth-child(1){
+    z-index: 100;
+  }
+  .delay:nth-child(2){
+    transition-delay: 50ms;
+    z-index: 99;
+  }
+  .delay:nth-child(3){
+    transition-delay: 100ms;
+    z-index: 98;
+  }
+  .delay:nth-child(4){
+    transition-delay: 600ms;
+  }
+
+  .logo{
+    background-color: red;
+  }
+
+
 
