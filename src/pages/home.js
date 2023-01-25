@@ -2,6 +2,14 @@ import {React} from 'react'
 import {useInView} from 'react-intersection-observer'
 import "./css/home.css"
 
+//icons
+import {FaWeight} from 'react-icons/fa'
+import {FaHeartbeat} from 'react-icons/fa'
+import {MdHealing} from 'react-icons/md'
+import {FaBed} from 'react-icons/fa'
+import {MdLocalPharmacy} from 'react-icons/md'
+import {FaHourglassHalf} from 'react-icons/fa'
+
 //Images
 import walkingMan from "../img/walking-man.jpg"
 
@@ -31,21 +39,37 @@ const {ref: gl, inView: glIsVisible} = useInView({threshold: 0.5,});
           health goals together.</p>
         </div>
       </section>
-      <div ref={bnf}>
-        <section className={bnfIsVisible ? 'show' : 'hidden'}>
-          <div className='logos'>
-            <div className={bnfIsVisible ? 'logo show' : 'logo hidden'}>
-            <p1>test1</p1>
+        <section ref = {bnf} className="bnf">
+          <div className='bnf-div-left'>
+              <p className='bnf-vert'>Benefits</p>
+          </div>
+          <div className='bnf-div-right'>
+            <div className='bnf-flex'>
+              <FaWeight className={bnfIsVisible ? 'show bnf-icon' : 'hidden bnf-icon'}/>
+              <p className='bnf-text'>Weight management: A healthy lifestyle can help you maintain a healthy weight, reduce your risk of obesity and associated health problems, such as diabetes and heart disease.</p>
             </div>
-            <div className={bnfIsVisible ? 'logo show' : 'logo hidden'}>
-            <p1>test2</p1>
+            <div className='bnf-flex'>
+              <FaHeartbeat className={bnfIsVisible ? 'show bnf-icon' : 'hidden bnf-icon'}/>
+              <p className='bnf-text'>Improved cardiovascular health: Eating a healthy diet, getting regular exercise and avoiding smoking can all help improve your heart health and reduce your risk of heart disease.</p>
             </div>
-            <div className={bnfIsVisible ? 'logo show' : 'logo hidden'}>
-            <p1>test3</p1>
+            <div className='bnf-flex'>
+              <MdHealing className={bnfIsVisible ? 'show bnf-icon' : 'hidden bnf-icon'}/>
+              <p className='bnf-text'>Stronger immune system: Eating a balanced diet and getting regular exercise can help boost your immune system, making you less susceptible to illnesses and infections.</p>
+            </div>
+            <div className='bnf-flex'>
+              <FaBed className={bnfIsVisible ? 'show bnf-icon' : 'hidden bnf-icon'}/>
+              <p className='bnf-text'>Better sleep: Regular exercise and a healthy diet can help improve the quality of your sleep, so you can wake up feeling more refreshed and energized.</p>
+            </div>
+            <div className='bnf-flex'>
+              <MdLocalPharmacy className={bnfIsVisible ? 'show bnf-icon' : 'hidden bnf-icon'}/>
+              <p className='bnf-text'>Reduced risk of chronic diseases: Eating a healthy diet, getting regular exercise, avoiding smoking and limiting alcohol intake can all help reduce your risk of developing chronic diseases such as cancer, diabetes, and heart disease.</p>
+            </div>
+            <div className='bnf-flex'>
+              <FaHourglassHalf className={bnfIsVisible ? 'show bnf-icon' : 'hidden bnf-icon'}/>
+              <p className='bnf-text'>Increased lifespan: Living a healthy lifestyle can help increase the length of your life and reduce the risk of premature death.</p>
             </div>
           </div>
         </section>
-      </div>
       <div ref={ment}>
         <section className={mentIsVisible ? 'show' : 'hidden'}>
           <h1>Mentality</h1>
