@@ -81,13 +81,17 @@ section {
   display: flex;
   justify-content: space-around;
 }
-.bnf-div-right{
+.bnf-div-mid{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100vh;
-  width: 80%;
+  width: 50%;
   align-items: left;
+}
+.bnf-div-right{
+  height: 100vh;
+  width: 30%;
 }
 .bnf-div-left{
   display: flex;
@@ -105,6 +109,9 @@ section {
   font-size: 5rem;
   margin: 1rem;
 }
+.bnf-icon:hover{
+  color: red;
+}
 .bnf-text{
   font-size: 15px;
   width: 50%;
@@ -115,4 +122,16 @@ section {
   font-size: 10vh;
   font-family: 'Times New Roman', Times, serif;
 }
+.bnf-img{
+  max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #aaa;
+    transition: all 0.2s ease-in-out;
+    margin: 4rem;
+}
 
+.bnf-img:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px #aaa;
+}
